@@ -1,0 +1,1 @@
+docker build -t assignment1_webapp:1.0.0 . -f Dockerfile

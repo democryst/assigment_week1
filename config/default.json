@@ -1,0 +1,9 @@
+{
+    "WebServicePort": 8080,
+    "DbHost" : "127.0.0.1",
+    "DbPort" : 54320,
+    "DbName" : "postgres",
+    "DbUserName" : "postgres",
+    "DbPassword" : "postgres",
+    "DbUseSSl"   : false
+}

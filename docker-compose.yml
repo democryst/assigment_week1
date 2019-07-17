@@ -1,0 +1,32 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres:12-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    container_name: "webapp_postgres"
+    ports:
+      - "54320:5432"
+    networks:
+    - assignment1
+
+  adminer:
+    image: adminer:4.7
+    restart: always
+    container_name: "webapp_adminer"
+    ports:
+      - 28080:8080
+    networks:
+    - assignment1
+
+networks:
+  assignment1:
+    ipam:
+      driver: default
+      config:
+      -
+        subnet: 172.16.107.0/24
